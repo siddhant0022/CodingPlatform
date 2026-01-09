@@ -4,19 +4,18 @@ const {Schema} = mongoose;
 const userSchema = new Schema({
   firstName:{
     type: String,
-    reuired: true,
+    required: true,
     minLength: 3,
     maxLength: 20
   },
   lastName:{
     type: String,
-    reuired: true,
     minlength: 3,
     maxLength: 20
   },
   emailId:{
     type: String,
-    reuired: true,
+    required: true,
     unique: true,
     trim: true,
     lowercase: true,
@@ -25,7 +24,6 @@ const userSchema = new Schema({
   },
   age:{
     type: Number,
-    required: true,
     min: 6,
     max: 80,
   },
