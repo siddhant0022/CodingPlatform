@@ -10,6 +10,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/user", authRouter);
 
+
+//starts initialization 
 const InitializeConnection = async() => {
   try{
     await Promise.all([main(),client.connect()]);
